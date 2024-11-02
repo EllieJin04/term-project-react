@@ -1,9 +1,13 @@
+import useFetch from "./useFecth";
+import NavBar from "./NavBar";
+import DishList from "./DishList";
+
 const Home = () => {
     const {data: todaysDish, isPending, error} = useFetch("/dish/today");
 
     return (  
         <div className="main">
-        <NavBar />
+            <NavBar />
             <div className="favorite-dish">
                 <div className="title">Favorite Dish:</div>
             </div>
