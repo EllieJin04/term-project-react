@@ -41,3 +41,58 @@ body {
   text-decoration: none;
   font-size: 20px
 }
+
+.flexcenter {
+  display: flex;
+  justify-content: center;
+}
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: var(--primary-color);
+  width: 80vw;
+  height: 65px;
+  border-radius: 32px;
+  border: none;
+  color: white;
+}
+
+input[type="text"] {
+  width: 80vw;
+  height: 63px;
+  background-color: #F5F4F2;
+  border-radius: 32px;
+  border: none;
+  margin-bottom: 20px;
+  color: #241C1C;
+  font-size: 18px;
+  font-family: "Mulish", sans-serif;
+}
+
+.roselogo {
+  width: 55px;
+}
+
+footmsg {
+  font-family: "Mulish", sans-serif;
+  font-size: 11x;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #800000;
+  text-decoration: bold;
+}
+
+.flexcenter > h1 {
+  margin-bottom: 40px;
+}
+
+.padtop {
+  margin-top: 15vh;
+}
+
