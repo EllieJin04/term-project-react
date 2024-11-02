@@ -15,7 +15,7 @@ const Home = () => {
                 <div className="title">Today's Dish:</div>
                 {error && <div>{error}</div>}
                 {isPending && <div>Loading today's dishes...</div>}
-                {todaysDish && <DishList blogs={todaysDish}/>}
+                {todaysDish && <DishList todaysDish={todaysDish}/>}
             </div>
         </div>
     );
