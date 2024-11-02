@@ -15,20 +15,22 @@ const Register = () => {
                         <h1>Register</h1>
                     </div>
 
-                    <div class="flexcenter">
-                        <input type='text' placeholder='Username'></input>
-                    </div>
+                    <form method='POST' enctype="application/x-www-form-urlencoded" action='/register'>
+                        <div class="flexcenter">
+                            <input name="username" type='text' placeholder='Username'></input>
+                        </div>
+
+                        <div class="flexcenter">
+                            <input name="password" type='text' placeholder='Password'></input>
+                        </div>
+
+                        <div class="flexcenter">
+                            <button>SIGN UP</button>
+                        </div>
+                    </form>
 
                     <div class="flexcenter">
-                        <input type='text' placeholder='Password'></input>
-                    </div>
-
-                    <div class="flexcenter">
-                        <button>LOGIN</button>
-                    </div>
-
-                    <div class="flexcenter">
-                        <p class="footmsg">Already have an account?&#9;<a>SIGN UP</a></p>
+                        <p class="footmsg">Already have an account?&#9;<a href='/login'>LOGIN</a></p>
                     </div>
 
 
