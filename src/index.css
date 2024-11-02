@@ -103,6 +103,15 @@ body {
   flex-direction: column;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 button {
   background-color: var(--primary-color);
   width: 80vw;
@@ -153,7 +162,15 @@ a {
   background-color: white;
   border-radius: 15px;
   width: 90vw;
-  padding: 10px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.star {
+  font-size: 30px;
+  color: var(--primary-color);
 }
 
 /* AddReview */
