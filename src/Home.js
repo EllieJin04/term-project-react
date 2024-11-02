@@ -88,10 +88,10 @@ const Home = () => {
 }
 
 const TodayDish = (props) => {
-    let stars = "";
+    //https://shripadk.github.io/react/docs/jsx-gotchas.html
+    let stars = ""
     for (let i = 0; i < props.rating; i++) {
-        //TODO
-        stars += "*";
+        stars += String.fromCharCode(9733)
     }
 
     return (
