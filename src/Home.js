@@ -1,4 +1,6 @@
 import useFetch from "./useFecth";
+import NavBar from "./Navbar";
+import DishList from "./DishList";
 
 const Home = () => {
     const {data: todaysDish, isPending, error} = useFetch("/dish/today");
