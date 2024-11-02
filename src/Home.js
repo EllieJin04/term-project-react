@@ -1,5 +1,5 @@
 import useFetch from "./useFecth";
-import NavBar from "./Navbar";
+import NavBar from "./NavBar";
 import DishList from "./DishList";
 
 const Home = () => {

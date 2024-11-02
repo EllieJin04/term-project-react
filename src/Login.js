@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from './Navbar';
 
 const Login = () => {
     //TODO replace icon with svg
