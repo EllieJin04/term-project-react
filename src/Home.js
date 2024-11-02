@@ -1,11 +1,9 @@
-import React from "react";
-import useFetch from "./useFecth";
-
 const Home = () => {
     const {data: todaysDish, isPending, error} = useFetch("/dish/today");
 
     return (  
         <div className="main">
+        <NavBar />
             <div className="favorite-dish">
                 <div className="title">Favorite Dish:</div>
             </div>
