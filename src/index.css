@@ -92,6 +92,14 @@ body {
   text-align: center;
 }
 
+.dish {
+  background-color: var(--background-color2);
+  border-radius: 5px;
+  width: 351px;
+  padding: 10px;
+  margin: 10px;
+}
+
 /* Login and Register */
 .flexcenter {
   display: flex;

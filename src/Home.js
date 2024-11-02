@@ -18,7 +18,36 @@ const Home = () => {
         } else if (button === "dinner") {
           document.querySelector(".dinner-section").scrollIntoView({ behavior: "smooth" });
         }
-      };
+    };
+
+    // dummy data for testing
+    let data = [
+        {
+            "dishname": "dishname1",
+            "rating": 5
+        },
+        {
+            "dishname": "dishname2",
+            "rating": 4
+        },
+        {
+            "dishname": "dishname3",
+            "rating": 3
+        },
+        {
+            "dishname": "dishname4",
+            "rating": 2
+        },
+        {
+            "dishname": "dishname5",
+            "rating": 1
+        },
+    ];
+
+    let components = [];
+    for (let entry of data) {
+        components.push(TodayDish(entry));
+    }
 
     return (  
         <div className="main">
@@ -42,18 +71,36 @@ const Home = () => {
             </div>
             <div className="lunch-section">
                 <div className="menu-name">Lunch Dishes Menu</div>
-                {error && <div>{error}</div>}
+                {/* {error && <div>{error}</div>}
                 {isPending && <div>Loading today's dishes...</div>}
-                {todaysDish && <DishList todaysDish={todaysDish.lunch} />}
+                {todaysDish && <DishList todaysDish={todaysDish.lunch} />} */}
+                {components}
             </div>
             <div className="dinner-section">
                 <div className="menu-name">Dinner Dishes Menu</div>
-                {error && <div>{error}</div>}
+                {/* {error && <div>{error}</div>}
                 {isPending && <div>Loading today's dishes...</div>}
-                {todaysDish && <DishList todaysDish={todaysDish.dinner} />}
+                {todaysDish && <DishList todaysDish={todaysDish.dinner} />} */}
+                {components}
             </div>
         </div>
     );
+}
+
+const TodayDish = (props) => {
+    let stars = "";
+    for (let i = 0; i < props.rating; i++) {
+        //TODO
+        stars += "*";
+    }
+
+    return (
+        <div className="dish">
+            <p>{props.dishname}</p>
+            <p>{stars}</p>
+            <p><a href="/review">Reviews</a></p>
+        </div>
+    )
 }
  
 export default Home;
