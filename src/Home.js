@@ -11,11 +11,25 @@ const Home = () => {
             <div className="favorite-dish">
                 <div className="title">Favorite Dish:</div>
             </div>
-            <div className="todays-dish">
-                <div className="title">Today's Dish:</div>
+            <div className="buttons">
+                <button onClick={() => document.querySelector('.lunch-section').scrollIntoView({ behavior: 'smooth' })}>
+                    Lunch dishes
+                </button>
+                <button onClick={() => document.querySelector('.dinner-section').scrollIntoView({ behavior: 'smooth' })}>
+                    Dinner dishes
+                </button>
+            </div>
+            <div className="lunch-section">
+                <div className="menu-name">Lunch Dishes Menu</div>
                 {error && <div>{error}</div>}
                 {isPending && <div>Loading today's dishes...</div>}
-                {todaysDish && <DishList todaysDish={todaysDish} />}
+                {todaysDish && <DishList todaysDish={todaysDish.lunch} />}
+            </div>
+            <div className="dinner-section">
+                <div className="menu-name">Dinner Dishes Menu</div>
+                {error && <div>{error}</div>}
+                {isPending && <div>Loading today's dishes...</div>}
+                {todaysDish && <DishList todaysDish={todaysDish.dinner} />}
             </div>
         </div>
     );
