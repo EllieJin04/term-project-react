@@ -2,7 +2,8 @@
 
 :root {
   --primary-color: #800000; 
-  --background-color: #E5E5E5; 
+  --background-color1: #E5E5E5; 
+  --background-color2: #fff;
   --text-color1: #333; 
   --text-corlor2: #fff;
 }
@@ -13,14 +14,16 @@
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--background-color1);
   color: var(--text-color1);
+  font-size: 20px;
 }
 
 .main {
   margin-top: 30px;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   margin-top: 56px;
@@ -39,5 +42,21 @@ body {
   width: 100%;
   color: var(--text-corlor2);
   text-decoration: none;
-  font-size: 20px
+}
+
+/* Home page */
+.title {
+  background-color: var(--primary-color);
+  color: var(--text-corlor2);
+  height: 45px;
+  width: 150px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 15px;
+  margin-left: 21px;
+  margin-bottom: 12px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
