@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #800000; 
-  --background-color: E5E5E5; 
+  --background-color: #E5E5E5; 
   --text-color1: #333; 
   --text-corlor2: #fff;
 }
@@ -10,6 +10,10 @@
 * {
   margin: 0;
   font-family: "Mulish", sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
   color: var(--text-color1);
 }
 
