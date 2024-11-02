@@ -15,24 +15,27 @@ const Login = () => {
                         <h1>Welcome</h1>
                     </div>
 
-                    <div class="flexcenter">
-                        <input type='text' placeholder='Username'></input>
-                    </div>
+                    <form method='POST' enctype="application/x-www-form-urlencoded" action="/login">
+                        <div class="flexcenter">
+                            <input type='text' placeholder='Username'></input>
+                        </div>
+
+                        <div class="flexcenter">
+                            <input type='text' placeholder='Password'></input>
+                        </div>
+
+                        <div class="flexcenter">
+                            <button>LOGIN</button>
+                        </div>
+
+                    </form>
 
                     <div class="flexcenter">
-                        <input type='text' placeholder='Password'></input>
-                    </div>
-
-                    <div class="flexcenter">
-                        <button>LOGIN</button>
-                    </div>
-
-                    <div class="flexcenter">
-                        <p class="footmsg">Don't have an account?&#9;<a>SIGN UP</a></p>
+                        <p class="footmsg">Don't have an account?&#9;<a href='/register'>SIGN UP</a></p>
                     </div>
 
                     <div class="flexcenter footmsg">
-                        <p class="footmsg">Don't want to register an account?&#9;<a>GUEST LOGIN</a></p>
+                        <p class="footmsg">Don't want to register an account?&#9;<a href='/'>GUEST LOGIN</a></p>
                     </div>
 
                     <div class="flexcenter">
