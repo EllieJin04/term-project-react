@@ -11,7 +11,7 @@ const DishList = (todaysDish) => {
         //         </div>
         //     ))}
         // </div>
-        1
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, alias. Reprehenderit vero libero quidem placeat illum repellat ipsa nulla amet in tempore facere sit necessitatibus est deserunt, ut, magnam veniam.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus corporis iusto explicabo. Ut reprehenderit placeat officiis quaerat numquam hic voluptatum. Quisquam cum, quam doloremque veritatis repellat deleniti excepturi. Vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, alias. Reprehenderit vero libero quidem placeat illum repellat ipsa nulla amet in tempore facere sit necessitatibus est deserunt, ut, magnam veniam.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus corporis iusto explicabo. Ut reprehenderit placeat officiis quaerat numquam hic voluptatum. Quisquam cum, quam doloremque veritatis repellat deleniti excepturi. Vitae Quisquam cum, quam doloremque veritatis repellat deleniti excepturi. Vitae"
     );
 }
  
