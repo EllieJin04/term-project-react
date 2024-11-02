@@ -60,6 +60,7 @@ body {
   -o-border-radius: 15px;
 }
 
+/* Login and Register */
 .flexcenter {
   display: flex;
   justify-content: center;
@@ -111,4 +112,10 @@ a {
 .padtop {
   margin-top: 15vh;
 }
+
+/* Search */
+
+/* Review */
+
+/* AddReview */
 

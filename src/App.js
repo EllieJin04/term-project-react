@@ -1,7 +1,6 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import React from 'react';
 import Home from "./Home";
-import NavBar from "./NavBar";
 import Search from "./Search";
 import Review from "./Review";
 import Login from "./Login";

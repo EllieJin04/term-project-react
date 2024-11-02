@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const DishList = () => {
+const DishList = (todaysDish) => {
     return (  
-        1
+        <div className="dish-list">  
+            {/* {todaysDish.map((dish) => (
+                
+            ))} */}
+        </div>
     );
 }
  
