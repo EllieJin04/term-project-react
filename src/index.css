@@ -130,5 +130,12 @@ a {
 
 /* Review */
 
+.reviewcomp {
+  background-color: white;
+  border-radius: 15px;
+  width: 90vw;
+  padding: 10px;
+}
+
 /* AddReview */
 
