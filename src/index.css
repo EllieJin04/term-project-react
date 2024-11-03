@@ -183,3 +183,18 @@ a {
 
 /* AddReview */
 
+.star-gray {
+  font-size: 100px;
+}
+
+.star-red{
+  font-size: 100px;
+  color: var(--primary-color);
+}
+
+
+.textbox {
+  width: 70vw;
+  height: 50vh;
+
+}

@@ -5,6 +5,7 @@ import Search from "./Search";
 import Review from "./Review";
 import Login from "./Login";
 import Register from "./Register";
+import AddReview from "./AddReview";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/register" element={<Register />}/>
           <Route path="/search" element={<Search />}/>
           <Route path="/review" element={<Review />}/>
+          <Route path="/addreview" element={<AddReview />}/>
         </Routes>
       </div>
     </Router>

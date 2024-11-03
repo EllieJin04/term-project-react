@@ -49,6 +49,9 @@ const Review = () => {
 
 }
 
+//TODO formatting
+// switch star and review icon
+// move username to right align
 const DishInfo = (props) => {
     let stars = "";
     for (let i = 0; i < props.stars; i++) {
