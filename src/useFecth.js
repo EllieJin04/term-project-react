@@ -12,6 +12,7 @@ const useFetch = (url) => {
                 if (!response.ok) {
                     throw Error("Could not fetch the data for the resource");
                 }
+                console.log(response);
                 const result = await response.json();
                 if (result.status === "success") {
                     setData(result.data);

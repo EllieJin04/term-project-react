@@ -6,8 +6,16 @@ import Review from "./Review";
 import Login from "./Login";
 import Register from "./Register";
 import AddReview from "./AddReview";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    fetch("http://localhost:8080")
+    .then(res => res.json)
+    .then(data => data.json)
+    .catch(err => console.log(err.message))
+  });
+  
   return (
     <Router>
       <div className="App">

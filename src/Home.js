@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import useFetch from "./useFecth";
 import NavBar from "./NavBar";
-import DishList from "./DishList";
+// import DishList from "./DishList";
 
 const Home = () => {
-    const {data: todaysDish, isPending, error} = useFetch("/dish/today");
+    const {data: todaysDish, isPending, error} = useFetch("http://localhost:8080/dish/today");
+    console.log(todaysDish)
 
     const [activeButton, setActiveButton] = useState(null);
 
@@ -71,10 +72,11 @@ const Home = () => {
             </div>
             <div className="lunch-section">
                 <div className="menu-name">Lunch Dishes Menu</div>
-                {/* {error && <div>{error}</div>}
+                {error && <div>{error}</div>}
                 {isPending && <div>Loading today's dishes...</div>}
-                {todaysDish && <DishList todaysDish={todaysDish.lunch} />} */}
-                {components}
+                {/* {todaysDish && <DishList todaysDish={todaysDish.lunch} />} */}
+                {/* {todaysDish && <TodayDish todaysDish={todaysDish.lunch}/>} */}
+                {/* {components} */}
             </div>
             <div className="dinner-section">
                 <div className="menu-name">Dinner Dishes Menu</div>
@@ -87,19 +89,29 @@ const Home = () => {
     );
 }
 
-const TodayDish = (props) => {
+const TodayDish = (todaysDish) => {
     //https://shripadk.github.io/react/docs/jsx-gotchas.html
+    //console.log(todaysDish);
     let stars = ""
-    for (let i = 0; i < props.rating; i++) {
+    for (let i = 0; i < 2; i++) {
         stars += String.fromCharCode(9733)
     }
 
     return (
         <div className="dish">
-            <p>{props.dishname}</p>
+            <p>{todaysDish.dishname}</p>
             <p>{stars}</p>
             <p><a href="/review">Reviews</a></p>
         </div>
+        // <div className="dish-list">  
+        //     {todaysDish.map((dish) => (
+        //         <div className="dish">
+        //             <p>{dish.dishName}</p>
+        //             <p>{stars}</p>
+        //             <p><a href="/review">Reviews</a></p>
+        //         </div>
+        //     ))}
+        // </div>
     )
 }
  
