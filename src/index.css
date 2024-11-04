@@ -211,6 +211,42 @@ a {
   cursor: pointer;
 }
 
+.search-tip {
+  margin-left: 2.5%;
+  color: var(--primary-color);
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.search-results .dish {
+  display: block;
+  color: var(--primary-color);
+  width: 95%;
+  height: fit-content;
+  background-color: var(--background-color2);
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  margin-bottom: -10px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.search-results .dish:last-child {
+  border: none;
+}
+
+.search-results a {
+  text-decoration: none;
+}
+
 
 /* Review */
 
