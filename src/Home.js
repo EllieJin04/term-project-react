@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useFetch from "./useFecth";
 import NavBar from "./NavBar";
-// import DishList from "./DishList";
+import {Link} from "react-router-dom";
 
 const Home = () => {
     const {data: todaysDish, isPending, error} = useFetch("http://localhost:8080/dish/today");
@@ -107,7 +107,7 @@ const TodayDish = (props) => {
                 <div className="dish" key={index}>
                     <p>{item}</p>
                     <p>Average rating: {stars}</p>
-                    <p><a href="/review">Reviews</a></p>
+                    <p><Link to="/review">Reviews</Link></p>
                 </div>
             ))}
         </div>

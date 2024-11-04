@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
 import NavBar from './NavBar';
 
 const AddReview = () => {
@@ -26,6 +26,13 @@ const AddReview = () => {
         }
     } 
 
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
+        navigate('/review');
+    };
+
     return (  
         <div className="main">
             <NavBar/>
@@ -42,7 +49,7 @@ const AddReview = () => {
                 <span onClick={onclkgen(4)} id="star4" class="star-gray">{STAR}</span>
             </div>
 
-            <form action="/review">
+            <form onSubmit={handleSubmit}>
                 <div class="flexcenter">
                     <textarea class="textbox" placeholder="Comments"></textarea>
                     <input name="rating" type='hidden' id="rating"></input>

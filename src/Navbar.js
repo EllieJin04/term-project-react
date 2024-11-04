@@ -7,6 +7,7 @@ const NavBar = () => {
     return (  
         <nav className="navbar">
             <div className="menu">
+                {/* https://reactrouter.com/en/main/hooks/use-location */}
                 <Link to="/" className={location.pathname === "/" ? "active" : ""}>Menu</Link>
             </div>
             <div className="search">
