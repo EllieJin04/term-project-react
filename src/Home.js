@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 
 const Home = () => {
     const {data: todaysDish, isPending, error} = useFetch("http://localhost:8080/dish/today");
-    console.log(todaysDish)
+    console.log(todaysDish);
 
     const [activeButton, setActiveButton] = useState(null);
 
@@ -22,33 +22,33 @@ const Home = () => {
     };
 
     // dummy data for testing
-    let data = [
-        {
-            "dishname": "dishname1",
-            "rating": 5
-        },
-        {
-            "dishname": "dishname2",
-            "rating": 4
-        },
-        {
-            "dishname": "dishname3",
-            "rating": 3
-        },
-        {
-            "dishname": "dishname4",
-            "rating": 2
-        },
-        {
-            "dishname": "dishname5",
-            "rating": 1
-        },
-    ];
+    // let data = [
+    //     {
+    //         "dishname": "dishname1",
+    //         "rating": 5
+    //     },
+    //     {
+    //         "dishname": "dishname2",
+    //         "rating": 4
+    //     },
+    //     {
+    //         "dishname": "dishname3",
+    //         "rating": 3
+    //     },
+    //     {
+    //         "dishname": "dishname4",
+    //         "rating": 2
+    //     },
+    //     {
+    //         "dishname": "dishname5",
+    //         "rating": 1
+    //     },
+    // ];
 
-    let components = [];
-    for (let entry of data) {
-        components.push(TodayDish(entry));
-    }
+    // let components = [];
+    // for (let entry of data) {
+    //     components.push(TodayDish(entry));
+    // }
 
     return (  
         <div className="main">
@@ -75,43 +75,42 @@ const Home = () => {
                 {error && <div>{error}</div>}
                 {isPending && <div>Loading today's dishes...</div>}
                 {/* {todaysDish && <DishList todaysDish={todaysDish.lunch} />} */}
-                {/* {todaysDish && <TodayDish todaysDish={todaysDish.lunch}/>} */}
+                {todaysDish && <TodayDish todaysDish={todaysDish.lunch}/>}
                 {/* {components} */}
             </div>
             <div className="dinner-section">
                 <div className="menu-name">Dinner Dishes Menu</div>
-                {/* {error && <div>{error}</div>}
+                {error && <div>{error}</div>}
                 {isPending && <div>Loading today's dishes...</div>}
-                {todaysDish && <DishList todaysDish={todaysDish.dinner} />} */}
-                {components}
+                {todaysDish && <TodayDish todaysDish={todaysDish.dinner} />}
+                {/* {components} */}
             </div>
         </div>
     );
 }
 
-const TodayDish = (todaysDish) => {
+const TodayDish = (props) => {
     //https://shripadk.github.io/react/docs/jsx-gotchas.html
-    //console.log(todaysDish);
     let stars = ""
     for (let i = 0; i < 2; i++) {
         stars += String.fromCharCode(9733)
     }
 
+    const todaysDish = props.todaysDish;
+    if (!todaysDish || !Array.isArray(todaysDish)) {
+        return null;
+    }
+    console.log("Todays' dish:", todaysDish);
     return (
-        <div className="dish">
-            <p>{todaysDish.dishname}</p>
-            <p>{stars}</p>
-            <p><a href="/review">Reviews</a></p>
+        <div className="dish-list">
+            {todaysDish.map((item, index) => (
+                <div className="dish" key={index}>
+                    <p>{item}</p>
+                    <p>Average rating: {stars}</p>
+                    <p><a href="/review">Reviews</a></p>
+                </div>
+            ))}
         </div>
-        // <div className="dish-list">  
-        //     {todaysDish.map((dish) => (
-        //         <div className="dish">
-        //             <p>{dish.dishName}</p>
-        //             <p>{stars}</p>
-        //             <p><a href="/review">Reviews</a></p>
-        //         </div>
-        //     ))}
-        // </div>
     )
 }
  
