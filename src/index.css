@@ -44,6 +44,20 @@ body {
   text-decoration: none;
 }
 
+.navbar div.active {
+  position: relative;
+}
+
+.navbar div.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; 
+  width: 100%;
+  height: 3px; 
+  background-color: var(--background-color2); 
+}
+
 /* Home page */
 .title {
   background-color: var(--primary-color);
@@ -161,34 +175,43 @@ a {
 }
 
 /* Search */
-.main .search-input {
-  background-color: var(--background-color2);
+.main form {
+  margin-top: 30px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-container .search-input {
+  width: 80%;
   height: 30px;
-  width: 95%;
+  margin-right: 5px;
   box-sizing: border-box;
-  padding: 12px;
-  border-radius: 5x;
-  -webkit-border-radius: 5x;
-  -moz-border-radius: 5x;
-  -ms-border-radius: 5x;
-  -o-border-radius: 5x;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
-.search-button {  
-  margin-left: -78px;
-  width: 72px;
-  height: 23px;
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
+.search-container .search-input:focus {
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+
+.search-container .search-button {
+  width: 15%;
+  height: 30px;
   border-radius: 5px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
   cursor: pointer;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
 }
-
 
 
 /* Review */
