@@ -42,14 +42,14 @@ const AddReview = () => {
                 <span onClick={onclkgen(4)} id="star4" class="star-gray">{STAR}</span>
             </div>
 
-            <form>
+            <form action="/review">
                 <div class="flexcenter">
                     <textarea class="textbox" placeholder="Comments"></textarea>
                     <input name="rating" type='hidden' id="rating"></input>
                 </div>
 
                 <div class="flexcenter">
-                    <button>Submit</button>
+                    <button type="submit">Submit</button>
                 </div>
             </form>
         </div>

@@ -68,7 +68,7 @@ const DishInfo = (props) => {
                         </div>
 
                         <div>
-                            <a class="underline">Add Review</a>
+                            <a href="/add_review">Add Review</a>
                         </div>
 
                         <p class="star">{stars}</p>

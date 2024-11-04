@@ -15,7 +15,7 @@ function App() {
     .then(data => data.json)
     .catch(err => console.log(err.message))
   });
-  
+
   return (
     <Router>
       <div className="App">
@@ -25,7 +25,7 @@ function App() {
           <Route path="/register" element={<Register />}/>
           <Route path="/search" element={<Search />}/>
           <Route path="/review" element={<Review />}/>
-          <Route path="/addreview" element={<AddReview />}/>
+          <Route path="/add_review" element={<AddReview />}/>
         </Routes>
       </div>
     </Router>

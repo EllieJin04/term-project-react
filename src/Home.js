@@ -92,7 +92,7 @@ const Home = () => {
 const TodayDish = (props) => {
     //https://shripadk.github.io/react/docs/jsx-gotchas.html
     let stars = ""
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 4; i++) {
         stars += String.fromCharCode(9733)
     }
 

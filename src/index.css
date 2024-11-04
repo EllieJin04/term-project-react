@@ -118,10 +118,6 @@ body {
   grid-template-columns: auto auto;
 }
 
-.underline {
-  text-decoration: underline;
-}
-
 button {
   background-color: var(--primary-color);
   width: 80vw;
